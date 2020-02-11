@@ -1,6 +1,7 @@
 let inputElement = document.getElementById('entrada');
 let buttonElement = document.getElementById('botao');
 let ulElement = document.getElementById('lista');
+
 //Criando lista
 let lista = [];
 
@@ -20,8 +21,6 @@ buttonElement.onclick = function (event) {
         alert("Insira algo")
     }
 
-
-
 }
 
 function remove(index) {
@@ -39,6 +38,7 @@ function render() {
     lista.map(function (element, index) {
         //criando o elemento li do html
         let liElement = document.createElement('li');
+        liElement.setAttribute("class", "animated bounceIn");
 
         //Criando elemento p do html
         let pElement = document.createElement('p');
